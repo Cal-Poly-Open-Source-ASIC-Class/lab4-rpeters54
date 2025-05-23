@@ -114,7 +114,7 @@ $(TESTS):
 		fi; \
 
 COCOTEST_DIR = ./cocotests
-COCOTEST_SUBDIRS = $(shell cd $(COCOTEST_DIR) && ls -d */ | grep -v "__pycache__" )
+COCOTEST_SUBDIRS := $(shell cd $(COCOTEST_DIR) && ls -d */ | grep -v "__pycache__" )
 COCOTESTS = $(COCOTEST_SUBDIRS:/=)
 .PHONY: cocotests
 cocotests:
